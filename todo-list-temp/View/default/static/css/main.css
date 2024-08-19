@@ -1,0 +1,163 @@
+*{
+	padding:0;
+	margin:0;
+}
+html,body{
+    height: 100%;
+}
+.box{
+	display: flex;
+	flex-direction:column;
+	height: 100%;
+}
+.header {
+	display: flex;
+	height:5%;
+	justify-content:space-between;
+	box-shadow:0px 5px 0px #eee;
+}
+.header .left{
+	width:1%;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+}
+.header a{
+	text-decoration: none;
+	color:black;
+}
+.header .left a{
+	width:2%;
+}
+.header .right{
+	width: 10%;
+}
+.header .right ul{
+	height:100%;
+	flex-wrap:nowrap;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	align-items: center;
+}
+.header .right ul li{
+	list-style: none;
+}
+.title_style{
+	display: flex;
+	align-items: center;
+}
+.title_style span{
+	font-family: sans-serif;
+	font-size: 96px;
+}
+.body{
+	flex-wrap: nowrap;
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
+	height:100%;
+	background:	#F0F0F0;
+}
+.body .container{
+	width: 50%;
+	background:#FDFFFF;
+	box-shadow:0 0 2px #FDFFFF;
+	border-radius:5px;
+	display: flex;
+	justify-content: center;
+}
+.container-form{
+	width: 70%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+.container-form span{
+	font-size:36px;
+	display: flex;
+	justify-content: center;
+}
+.container-form input{
+	margin-top: 5%;
+	flex-direction: column;
+	width:100%;
+	height:30px;
+	padding-left:5px; 
+	border-radius:3px;
+}
+.form-footer{
+	margin-top: 5%;
+	display: flex;
+	justify-content:space-between;
+}
+.form-footer button{
+	height:30px;
+	width:100px;
+	border:1px solid #fff;
+}
+.body .container ul{
+	margin-top:2%;
+	margin-bottom: 3%;
+	width:95%;
+}
+.body .container a{
+	text-decoration: none;
+	color:black;
+}
+.body .container ul li{
+	display: flex;
+	width: 100%;
+	list-style: none;
+}
+.body .container ul li .left{
+	width: 100%;
+	border-bottom:1px solid #eee;
+}
+.footer{
+	display: flex;
+	height:5%;
+	justify-content:center;
+	align-items: center;
+}
+.paginate{
+	width:50%;
+	display: flex;
+	justify-content: center;
+}
+.paginate a{
+	text-decoration: none;
+}
+.container .content-title{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.content-title .title{
+	width: 100%;
+	word-wrap:break-word;
+	display: flex;
+	justify-content: center;
+}
+.content-title .title p{
+	font-size: 36px;
+}
+.content-title .data-time{
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+.content-title span{
+	width: 100%;
+	border-bottom: 1px solid #eee;
+}
+.content-body{
+	margin-top: 5px;
+	width: 100%;
+	word-wrap:break-word;
+}

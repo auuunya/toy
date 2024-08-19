@@ -1,0 +1,25 @@
+{{define "content"}}
+<div class="container">
+	<ul>
+		{{range .Todo}}
+		<li>
+		<div class="left">
+			{{if .Is_success}}
+				<h3 class="content-left"><s><a href="" rel="{{.Id}}">{{.Title}}</a></s></h3>
+			{{else}}
+				<h3 class="content-left"><a style="color:red;" href="" rel="{{.Id}}">{{.Title}}</a></h3>
+			{{end}}
+		</div>
+		</li>
+		{{end}}
+	</ul>
+</div>
+<div class="paginate">
+	{{if ne .PrePage -1}}
+	<a href="/?page={{.PrePage}}"><<</a>
+	{{end}}
+	{{if ne .NextPage -1}}
+	<a href="/?page={{.NextPage}}">>></a>
+	{{end}}
+</div>
+{{end}}

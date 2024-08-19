@@ -1,0 +1,27 @@
+[
+	{
+		"Year": "1997",
+		"Make": "Make",
+		"Model": "E350",
+		"Description": "ac, abs, moon",
+		"Price": "3000.00"
+	},{
+		"Year": "1999",
+		"Make": "Chevy",
+		"Model": "Venture",
+		"Description": "Extended Edition",
+		"Price": "4900.00"
+	},{
+		"Year": "1996",
+		"Make": "Jeep",
+		"Model": "Grand Cherokee",
+		"Description": "MUST SELL!",
+		"Price": ""
+	},{
+		"Year": "air",
+		"Make": "moon roof",
+		"Model": "loaded",
+		"Description": "",
+		"Price": "4799.00"
+	}
+]

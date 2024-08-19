@@ -1,0 +1,18 @@
+{{define "content"}}
+<div class="content">
+	<form action="/admin/edituser/" method="POST" id="form">
+		<div class="form-group">
+			<input class="form-control" id="disabledInput" type="text" placeholder="{{.Email}}" disabled>
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" name="username" placeholder="Username">
+		</div>
+		<div class="form-group">
+			<input type="password" class="form-control" name="password" placeholder="Password">
+		</div>
+		<div class="btn-class">
+			<input class="btn btn-default" type="submit" value="Edit">
+		</div>
+	</form>
+</div>
+{{end}}

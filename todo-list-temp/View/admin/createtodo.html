@@ -1,0 +1,15 @@
+{{define "content"}}
+<div class="content">
+	<form action="/admin/createtodo/" method="POST" id="form">
+		<div class="form-group">
+			<input type="text" class="form-control" name="title" placeholder="Title">
+		</div>
+		<div class="form-group">
+			<textarea class="form-control" rows="10" name="content" placeholder="Content"></textarea>
+		</div>
+		<div class="btn-class">
+			<input class="btn btn-default" type="submit" value="Create">
+		</div>
+	</form>
+</div>
+{{end}}

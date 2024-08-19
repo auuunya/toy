@@ -1,0 +1,20 @@
+{{define "content"}}
+<div class="container">
+	<div class="content-title">
+		<div class="title">
+			{{if .Is_success}}
+			<s><p>{{.Title}}</p></s>
+			{{else}}
+			<p>{{.Title}}</p>
+			{{end}}
+		</div>
+		<div class="data-time">
+			{{.Data}}
+		</div>
+		<span></span>
+		<div class="content-body">
+			{{.Content}}
+		</div>
+	</div>
+</div>
+{{end}}
